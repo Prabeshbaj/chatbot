@@ -1,0 +1,67 @@
+/* ChatWidget.css */
+.chat-icon-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #0084ff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.chat-icon-button:hover {
+  background-color: #0073e6;
+}
+
+.chat-icon {
+  width: 30px;
+  height: 30px;
+  fill: white;
+}
+
+.chat-iframe-container {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 375px;
+  height: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  z-index: 998;
+  display: none;
+  background: white;
+}
+
+.chat-iframe-container.open {
+  display: block;
+}
+
+.chat-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 480px) {
+  .chat-iframe-container {
+    width: 100%;
+    height: 100vh;
+    bottom: 0;
+    right: 0;
+    border-radius: 0;
+  }
+
+  .chat-icon-button {
+    bottom: 20px;
+    right: 20px;
+  }
+}
